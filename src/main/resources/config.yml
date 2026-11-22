@@ -1,0 +1,66 @@
+# しゃがんだ時に周囲の作物を成長させる範囲・確率などの設定
+
+# 作物を探す半径（ブロック）
+radius: 4
+# 垂直方向の探索範囲（上下それぞれ）
+vertical-range: 1
+# 骨粉を使える各ブロックが1回のしゃがみで成長する確率 (0.0 - 1.0)
+chance: 0.35
+# 連続発動を防ぐクールダウン（tick, 20tick = 1秒）
+cooldown-ticks: 5
+# 成長時にパーティクルを表示する
+particles: true
+# 効果を有効にするワールド（空なら全ワールド）
+enabled-worlds: []
+# 周囲の家畜の成長（子供）と繁殖クールダウン（親）を早める設定
+entities:
+  enabled: true
+  # 各個体が1回のしゃがみで成長する確率 (0.0 - 1.0)
+  chance: 0.5
+  # 1回で短縮する成長時間（tick）。子供は成長まで24000tick。餌1個で約2400tick短縮
+  age-boost-ticks: 2400
+  # 繁殖後の親の、次の繁殖までのクールダウンを1回で短縮する時間（tick）。クールダウンは6000tick。0で無効
+  breed-cooldown-boost-ticks: 600
+  # 対象にするエンティティ（EntityType名）
+  types:
+    - COW
+    - MOOSHROOM
+    - SHEEP
+    - PIG
+    - CHICKEN
+    - GOAT
+
+# 骨粉を適用するブロック（Material名）のホワイトリスト。ここに書いたものだけが成長する。
+# 地面ブロック(草ブロック・水中の砂など)を入れると、周囲に草・海草・サンゴが生えるので注意。
+# 例: キノコ類(RED_MUSHROOM, BROWN_MUSHROOM, CRIMSON_FUNGUS, WARPED_FUNGUS)は巨大キノコになる。
+growable:
+  # 作物
+  - WHEAT
+  - CARROTS
+  - POTATOES
+  - BEETROOTS
+  - TORCHFLOWER_CROP
+  - PITCHER_CROP
+  - MELON_STEM
+  - PUMPKIN_STEM
+  - COCOA
+  - SWEET_BERRY_BUSH
+  # 苗木
+  - OAK_SAPLING
+  - SPRUCE_SAPLING
+  - BIRCH_SAPLING
+  - JUNGLE_SAPLING
+  - ACACIA_SAPLING
+  - DARK_OAK_SAPLING
+  - CHERRY_SAPLING
+  - PALE_OAK_SAPLING
+  - MANGROVE_PROPAGULE
+  - AZALEA
+  - FLOWERING_AZALEA
+  # 竹・ツタ
+  - BAMBOO_SAPLING
+  - BAMBOO
+  - TWISTING_VINES
+  - WEEPING_VINES
+  - CAVE_VINES
+  - CAVE_VINES_PLANT

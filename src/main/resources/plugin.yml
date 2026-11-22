@@ -1,0 +1,17 @@
+name: SneakGrow
+version: '${version}'
+main: dev.sneakgrow.SneakGrowPlugin
+api-version: '1.21'
+description: Sneaking makes nearby crops grow.
+commands:
+  sneakgrow:
+    description: SneakGrow admin command
+    usage: /sneakgrow reload
+    permission: sneakgrow.admin
+permissions:
+  sneakgrow.use:
+    description: Allows sneaking to grow nearby crops
+    default: true
+  sneakgrow.admin:
+    description: Allows reloading the config
+    default: op
