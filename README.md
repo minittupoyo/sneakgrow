@@ -63,3 +63,12 @@ gradle build
 ## ライセンス
 
 [MIT License](LICENSE)
+
+## リリース手順(メンテナ向け)
+
+`v1.0.0` のようなタグを push すると、GitHub Actions が JAR をビルドして Release を作成します。
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
